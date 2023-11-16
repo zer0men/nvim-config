@@ -6,3 +6,4 @@ end
 
 
 zer0_require("options")
+zer0_require("lazy")
