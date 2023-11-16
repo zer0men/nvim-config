@@ -1,6 +1,6 @@
 local package_name = "zer0"
 
-function zero_require(name)
+function zer0_require(name)
 	require(package_name .. "." .. name)
 end
 
