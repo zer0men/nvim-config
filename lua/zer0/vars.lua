@@ -27,7 +27,7 @@ M.linters = {
 	markdown = { "vale" },
 	lua = { "luacheck" },
 	ansible = { "ansible-lint" },
-	python = { "pycodestyle", "pylint" },
+	python = { "pylint" },
 }
 
 local mason_tools = {}
