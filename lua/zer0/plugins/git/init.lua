@@ -1,3 +1,3 @@
 return {
-  import ="zer0.plugins.git"
+	import = "zer0.plugins.git",
 }
