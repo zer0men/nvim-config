@@ -5,6 +5,8 @@ return {
 			ensure_installed = "all",
 			sync_install = true,
 		})
+		vim.cmd.TSInstall("all")
 		vim.cmd.TSUpdate()
+		vim.cmd.TSEnable("highlight")
 	end,
 }
