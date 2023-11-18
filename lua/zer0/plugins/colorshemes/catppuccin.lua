@@ -1,20 +1,13 @@
-function set_colorsheme(colorscheme_name)
-	if not vim.g.colorsheme then
-		vim.cmd.colorsheme(colorscheme_name)
-		vim.g.colorsheme = colorscheme_name
-	end
-end
+local colorschemes = require("zer0.utils.colorschemes")
 
 return {
 	"catppuccin/nvim",
 	name = "catppuccin",
 	opts = {},
-	config = function(plugin, opts)
-		plugin.setup(opts)
-		if not vim.g.colorsheme then
-			local name = "catppuccin"
-			set_colorsheme(name)
-		end
+	config = function(catppuccin, opts)
+		require(catppuccin.name).setup(opts)
+		local name = "catppuccin"
+		colorschemes.set_colorscheme(name)
 	end,
-	priority = 10,
+	priority = 101,
 }
