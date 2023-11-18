@@ -8,6 +8,6 @@ return {
 		require("telescope").load_extension("git_worktree")
 	end,
 	keys = {
-		{ "<leader>gww", "<cmd>Telescope git-worktree git-worktrees<cr>", desc = "Choose Git Worktree" },
+		{ "<leader>gww", "<cmd>Telescope git_worktree git_worktrees<cr>", desc = "Choose Git Worktree" },
 	},
 }
