@@ -13,20 +13,22 @@ local options = {
 	relativenumber = true,
 	scrolloff = 7,
 	shiftround = true,
-	shiftwidth = 2,
+	shiftwidth = 4,
 	signcolumn = "yes",
 	smartcase = true,
 	smarttab = true,
-	tabstop = 2,
+	tabstop = 4,
 	termguicolors = true,
 	timeout = true,
-	timeoutlen = 300,
+	timeoutlen = 1000,
 	title = true,
-	undo = true,
 	undofile = true,
-	updatetime = 250,
+	updatetime = 50,
+	colorcolumn = 80,
 }
 
 for key, value in pairs(options) do
 	vim.o[key] = value
 end
+
+vim.g.mapleader = " "
