@@ -3,7 +3,7 @@ local vars = require("zer0.vars")
 return {
 	"stevearc/conform.nvim",
 	event = {
-		"BufReadPre",
+		"BufRead",
 		"BufNewFile",
 	},
 	opts = {
