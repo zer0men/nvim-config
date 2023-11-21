@@ -1,5 +1,5 @@
-local telescope_tools = require("zer0.plugins.tools.telescope")
 local _, z_utils = pcall(require, "telescope._extensions.zoxide.utils")
+local telescope_tools = vim.g.telescope
 
 return {
 	"jvgrootveld/telescope-zoxide",

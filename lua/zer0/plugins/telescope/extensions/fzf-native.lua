@@ -1,4 +1,4 @@
-local telescope_tools = require("zer0.plugins.tools.telescope")
+local telescope_tools = vim.g.telescope
 
 return {
 	"nvim-telescope/telescope-fzf-native.nvim",

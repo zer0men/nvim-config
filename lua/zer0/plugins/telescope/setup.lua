@@ -4,7 +4,7 @@ if not telescope_ok then
 	return
 end
 
-local telescope_tools = require("zer0.plugins.tools.telescope")
+local telescope_tools = vim.g.telescope
 
 telescope.setup({
 	defaults = {
@@ -19,12 +19,12 @@ telescope.setup({
 			theme = "dropdown",
 		},
 	},
-	extensions = telescope_tools.extensions_opts,
+	extensions = telescope_tools.get_extensions(),
 })
 
 vim.g["rooter_cd_cmd"] = "lcd"
 
-local extensions = telescope_tools.extensions
-for _, extension_name in pairs(extensions) do
+local extensions = telescope_tools.get_extensions()
+for extension_name, _ in pairs(extensions) do
 	telescope.load_extension(extension_name)
 end

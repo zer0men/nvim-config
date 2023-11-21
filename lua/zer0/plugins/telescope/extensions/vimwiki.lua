@@ -1,5 +1,4 @@
-local telescope_tools = require("zer0.plugins.tools.telescope")
-
+local telescope_tools = vim.g.telescope
 return {
 	"ElPiloto/telescope-vimwiki.nvim",
 	module = true,
