@@ -11,7 +11,6 @@ M.lsp_servers = {
 	"terraformls",
 	"tflint",
 	"tsserver",
-	"efm",
 	"pyright",
 	"yamlls",
 }
@@ -25,7 +24,6 @@ M.formatters = {
 
 M.linters = {
 	markdown = { "vale" },
-	lua = { "luacheck" },
 	ansible = { "ansible-lint" },
 	python = { "pylint" },
 }

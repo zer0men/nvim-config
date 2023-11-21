@@ -1,12 +1,20 @@
 local vars = require("zer0.vars")
-
 return {
 	"neovim/nvim-lspconfig",
+	dependencies = {
+		{ "folke/neodev.nvim", optional = true },
+	},
 	config = function()
 		local lspconfig = require("lspconfig")
 		for _, lsp_server in ipairs(vars.lsp_servers) do
+			local is_config, config = pcall(require, "zer0.plugins.lsp.config." .. lsp_server)
+			local setting = nil
+			if is_config then
+				setting = config
+			end
 			lspconfig[lsp_server].setup({
 				capabilities = vim.g.capabilities,
+				settings = setting,
 			})
 		end
 		vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
