@@ -24,7 +24,7 @@ local options = {
 	title = true,
 	undofile = true,
 	updatetime = 50,
-	colorcolumn = 80,
+	colorcolumn = "70,80",
 }
 
 for key, value in pairs(options) do
@@ -32,3 +32,7 @@ for key, value in pairs(options) do
 end
 
 vim.g.mapleader = " "
+
+vim.diagnostic.config({
+	virtual_text = false,
+})
