@@ -9,9 +9,27 @@ return {
 		require("zer0.plugins.telescope.setup")
 	end,
 	keys = {
-		{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find File" },
-		{ "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Find Grep" },
-		{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Find Helps" },
+		{
+			"<leader>ff",
+			function()
+				vim.cmd.Telescope("find_files")
+			end,
+			desc = "Find File",
+		},
+		{
+			"<leader>fg",
+			function()
+				vim.cmd.Telescope("live_grep")
+			end,
+			desc = "Find Grep",
+		},
+		{
+			"<leader>fh",
+			function()
+				vim.cmd.Telescope("help_tags")
+			end,
+			desc = "Find Helps",
+		},
 	},
 	lazy = false,
 }

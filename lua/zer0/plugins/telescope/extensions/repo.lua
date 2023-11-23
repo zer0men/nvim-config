@@ -15,6 +15,12 @@ return {
 		vim.g["rooter_cd_cmd"] = "lcd"
 	end,
 	keys = {
-		{ "<leader>fp", "<cmd>Telescope repo list<cr>", desc = "Find Projects" },
+		{
+			"<leader>fp",
+			function()
+				vim.cmd.Telescope("repo", "list")
+			end,
+			desc = "Find Projects",
+		},
 	},
 }

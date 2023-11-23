@@ -8,7 +8,19 @@ return {
 		require("telescope").load_extension("git_worktree")
 	end,
 	keys = {
-		{ "<leader>gww", "<cmd>Telescope git_worktree git_worktrees<cr>", desc = "Choose Git Worktree" },
-		{ "<leader>gwc", "<cmd>Telescope git_worktree create_git_worktree<cr>", desc = "Choose Git Worktree" },
+		{
+			"<leader>gww",
+			function()
+				vim.cmd.Telescope("git_worktree", "git_worktrees")
+			end,
+			desc = "Choose Git Worktree",
+		},
+		{
+			"<leader>gwc",
+			function()
+				vim.cmd.Telescope("git_worktree", "create_git_worktree")
+			end,
+			desc = "Choose Git Worktree",
+		},
 	},
 }

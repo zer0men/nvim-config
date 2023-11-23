@@ -4,6 +4,6 @@ return {
 		"Git",
 	},
 	keys = {
-		{ "<leader>gg", "<cmd>Git<cr>", desc = "Git" },
+		{ "<leader>gg", vim.cmd.Git, desc = "Git" },
 	},
 }
