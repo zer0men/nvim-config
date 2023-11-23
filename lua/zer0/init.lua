@@ -6,4 +6,5 @@ end
 
 zer0_require("globals")
 zer0_require("options")
+zer0_require("mapping")
 zer0_require("lazy")
