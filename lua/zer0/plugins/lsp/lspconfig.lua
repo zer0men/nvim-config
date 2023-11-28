@@ -15,6 +15,9 @@ return {
 			lspconfig[lsp_server].setup({
 				capabilities = vim.g.capabilities,
 				settings = setting,
+				on_attach = function(client)
+					client.resolved_capabilities.document_formatting = false
+				end,
 			})
 		end
 		vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
