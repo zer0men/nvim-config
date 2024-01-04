@@ -1,6 +1,6 @@
 local main_module = "zer0"
 
-function zer0_require(name)
+local function zer0_require(name)
 	require(main_module .. "." .. name)
 end
 

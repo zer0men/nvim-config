@@ -23,6 +23,7 @@ local options = {
 	timeoutlen = 1000,
 	title = true,
 	undofile = true,
+    autoread = true,
 	updatetime = 50,
 	colorcolumn = "80",
 }
