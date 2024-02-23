@@ -5,6 +5,7 @@ return {
 		{ "folke/neodev.nvim", optional = true },
 	},
 	config = function()
+        require("neodev").setup({})
 		local lspconfig = require("lspconfig")
 		for _, lsp_server in ipairs(vars.lsp_servers) do
 			local is_config, config = pcall(require, "zer0.plugins.lsp.config." .. lsp_server)
@@ -13,6 +14,7 @@ return {
 				setting = config
 			end
 			lspconfig[lsp_server].setup({
+                root_dir = require('lspconfig.util').root_pattern('.git'),
 				capabilities = vim.g.capabilities,
 				settings = setting,
 				on_attach = function(client)

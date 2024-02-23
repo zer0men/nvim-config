@@ -21,7 +21,7 @@ local conds = require("luasnip.extras.expand_conditions")
 
 
 local function datetimef(_, _, format)
-    return "# " .. vim.fn.trim(vim.fn.strftime(format))
+    return vim.fn.trim(vim.fn.strftime(format))
 end
 
 

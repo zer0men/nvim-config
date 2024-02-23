@@ -6,6 +6,7 @@ return {
     init = function()
         telescope_tools.add_extension("repo", {
             list = {
+                search_dirs = {"~/.local/share/nvim/lazy", "~/projects"},
                 fd_opts = {},
                 settings = {
                     auto_lcd = true,

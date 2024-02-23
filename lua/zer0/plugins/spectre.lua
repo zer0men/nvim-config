@@ -5,6 +5,13 @@ return {
     },
     config = function()
         local spectre = require("spectre")
+        spectre.setup({
+            default = {
+                replace = {
+                    cmd = "oxi"
+                }
+            }
+        })
         vim.keymap.set("n", "<leader>S", spectre.toggle, {
             desc = "Toggle Spectre",
         })

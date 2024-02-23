@@ -11,6 +11,6 @@ return {
 		"Neotree",
 	},
 	keys = {
-		{ "<leader>nn", vim.cmd.NvimTreeToggle, desc = "NvimTree Toggle" },
+		{ "<leader>N", function() vim.cmd.Neotree("toggle") end , desc = "NvimTree Toggle" },
 	},
 }

@@ -9,6 +9,7 @@ M.lsp_servers = {
 	"jsonls",
 	"lua_ls",
 	"terraformls",
+    "intelephense",
 	"tflint",
 	"tsserver",
 	"pyright",
