@@ -1,3 +1,3 @@
 return {
-	import = "zer0.plugins.lsp",
+  import = "zer0.plugins.lsp",
 }

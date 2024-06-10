@@ -20,9 +20,18 @@ local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.expand_conditions")
 
 local function theSameAs(args, _, _)
-    return args[1][1]
+  return args[1][1]
 end
 
 return {
-    s("pcall", { t("local is_"), f(theSameAs, {1},{}), t(", "), f(theSameAs, {1}, {}), t(" = pcall(require, \""), i(1, "module_name"), t("\")"), i(0)})
+  s("pcall", {
+    t("local is_"),
+    f(theSameAs, { 1 }, {}),
+    t(", "),
+    f(theSameAs, { 1 }, {}),
+    t(' = pcall(require, "'),
+    i(1, "module_name"),
+    t('")'),
+    i(0),
+  }),
 }

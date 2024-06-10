@@ -1,3 +1,3 @@
 return {
-	{ import = "zer0.plugins.cmp" },
+  { import = "zer0.plugins.cmp" },
 }

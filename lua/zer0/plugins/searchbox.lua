@@ -1,6 +1,6 @@
 return {
-  'VonHeikemen/searchbox.nvim',
+  "VonHeikemen/searchbox.nvim",
   dependencies = {
-    {'MunifTanjim/nui.nvim'}
-  }
+    { "MunifTanjim/nui.nvim" },
+  },
 }

@@ -1,3 +1,3 @@
 return {
-	import = "zer0.plugins.dap",
+  import = "zer0.plugins.dap",
 }

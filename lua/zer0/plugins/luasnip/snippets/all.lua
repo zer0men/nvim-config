@@ -19,13 +19,11 @@ local fmta = require("luasnip.extras.fmt").fmta
 local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.expand_conditions")
 
-
 local function datetimef(_, _, format)
-    return vim.fn.trim(vim.fn.strftime(format))
+  return vim.fn.trim(vim.fn.strftime(format))
 end
 
-
 return {
-    s("now", { f(datetimef, {}, { user_args = { "%H:%M:%S" } }), t(" "), i(0, "") }),
-    s("today", { f(datetimef, {}, { user_args = { "%d.%m.%Y" } }), t(" "), i(0, "") }),
+  s("now", { f(datetimef, {}, { user_args = { "%H:%M:%S" } }), t(" "), i(0, "") }),
+  s("today", { f(datetimef, {}, { user_args = { "%d.%m.%Y" } }), t(" "), i(0, "") }),
 }

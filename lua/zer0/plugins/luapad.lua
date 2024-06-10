@@ -1,3 +1,3 @@
 return {
-    'rafcamlet/nvim-luapad'
+  "rafcamlet/nvim-luapad",
 }

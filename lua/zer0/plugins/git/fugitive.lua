@@ -1,10 +1,37 @@
 return {
-    "tpope/vim-fugitive",
-    cmd = {
-        "Git",
+  "tpope/vim-fugitive",
+  cmd = {
+    "Git",
+  },
+  keys = {
+    { "<leader>gg", vim.cmd.Git, desc = "Git" },
+    {
+      "<leader>gbA",
+      function()
+        vim.cmd.Git("add -n %")
+      end,
+      desc = "Git",
     },
-    keys = {
-        { "<leader>gg", vim.cmd.Git,                                  desc = "Git" },
-        { "<leader>gs", function() vim.cmd.Git("status --short") end, desc = "Git" },
+    {
+      "<leader>gs",
+      function()
+        vim.cmd.Git("status --short")
+      end,
+      desc = "Git",
     },
+    {
+      "<leader>gP",
+      function()
+        vim.cmd.Git("push")
+      end,
+      desc = "Git push",
+    },
+    {
+      "<leader>gp",
+      function()
+        vim.cmd.Git("pull")
+      end,
+      desc = "Git pull",
+    },
+  },
 }

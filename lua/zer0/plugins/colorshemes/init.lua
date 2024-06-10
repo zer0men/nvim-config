@@ -1,3 +1,3 @@
 return {
-	import = "zer0.plugins.colorshemes",
+  import = "zer0.plugins.colorshemes",
 }

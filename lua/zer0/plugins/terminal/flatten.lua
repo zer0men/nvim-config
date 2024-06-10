@@ -1,11 +1,11 @@
 return {
-	"willothy/flatten.nvim",
-	config = true,
-    opts = {
-        window = {
-          open =  "alternate",
-        }
+  "willothy/flatten.nvim",
+  config = true,
+  opts = {
+    window = {
+      open = "alternate",
     },
-	lazy = false,
-	priority = 1001,
+  },
+  lazy = false,
+  priority = 1001,
 }

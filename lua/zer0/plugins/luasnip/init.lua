@@ -1,3 +1,3 @@
 return {
-    import = "zer0.plugins.luasnip.luasnip"
+  import = "zer0.plugins.luasnip.luasnip",
 }

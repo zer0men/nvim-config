@@ -1,4 +1,4 @@
 return {
-    "axieax/urlview.nvim",
-    opts = {},
+  "axieax/urlview.nvim",
+  opts = {},
 }
