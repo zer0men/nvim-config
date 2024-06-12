@@ -3,7 +3,7 @@ return {
   version = "*",
 
   opts = {
-    shell = string.format('bash -c "tmux new"'),
+    shell = string.format('bash -c "tmux -L nvim new"'),
     direction = "float",
     open_mapping = "<leader>;",
     insert_mappings = false, -- whether or not the open mapping applies in insert mode
