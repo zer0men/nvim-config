@@ -7,7 +7,7 @@ return {
     config = function()
       local luasnip_lua_loader_lua = require("luasnip.loaders.from_lua")
       local luasnip_lua_loader = require("luasnip.loaders")
-      require("luasnip.loaders.from_vscode").load({})
+      require("luasnip.loaders.from_vscode").lazy_load({})
 
       luasnip_lua_loader_lua.lazy_load({ paths = "~/.config/nvim/lua/zer0/plugins/luasnip/snippets" })
       vim.keymap.set("n", "<leader>se", luasnip_lua_loader.edit_snippet_files, { desc = "Edit snippets" })

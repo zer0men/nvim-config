@@ -5,6 +5,7 @@ return {
     { "nvim-lua/popup.nvim" },
     { "nvim-lua/plenary.nvim" },
   },
+  event = "VeryLazy",
   config = function()
     require("zer0.plugins.telescope.setup")
   end,
@@ -53,5 +54,5 @@ return {
       desc = "Find Helps",
     },
   },
-  lazy = false,
+  lazy = true,
 }

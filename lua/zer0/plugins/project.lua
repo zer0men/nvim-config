@@ -1,5 +1,6 @@
 return {
   "ahmedkhalf/project.nvim",
+  event = "VeryLazy",
   config = function()
     require("project_nvim").setup({
       -- patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json" },
@@ -15,4 +16,12 @@ return {
       vim.cmd.Telescope("projects")
     end, { desc = "Find projects" })
   end,
+  keys = {
+    {
+      "<leader>fp",
+      function()
+        vim.cmd.Telescope("project")
+      end,
+    },
+  },
 }
