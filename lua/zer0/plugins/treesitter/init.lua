@@ -8,5 +8,10 @@ return {
     })
     vim.cmd.TSInstall("all")
     vim.cmd.TSUpdate()
+    vim.cmd.TSEnable("highlight")
+
+    vim.keymap.set("n", "<leader>tth", function()
+      vim.cmd.TSBufToggle("highlight")
+    end, { desc = "Toggle buffer Highlight" })
   end,
 }
