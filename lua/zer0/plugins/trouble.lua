@@ -3,28 +3,25 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   lazy = true,
   opts = {
-    auto_close = true,
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
+    focus = true,
   },
   keys = {
     {
       "gd",
       function()
-        vim.cmd.Trouble("lsp_definitions", "focus")
+        vim.cmd.Trouble("lsp_definitions")
       end,
     },
     {
       "gr",
       function()
-        vim.cmd.Trouble("lsp_references", "focus")
+        vim.cmd.Trouble("lsp_references")
       end,
     },
     {
       "<leader>q",
       function()
-        vim.cmd.Trouble("diagnostics", "focus")
+        vim.cmd.Trouble("diagnostics")
       end,
     },
   },
