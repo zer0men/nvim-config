@@ -3,7 +3,7 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   lazy = true,
   opts = {
-      auto_close = false
+    auto_close = false,
     -- your configuration comes here
     -- or leave it empty to use the default settings
     -- refer to the configuration section below
@@ -19,6 +19,12 @@ return {
       "gr",
       function()
         vim.cmd.Trouble("lsp_references")
+      end,
+    },
+    {
+      "<leader>q",
+      function()
+        vim.cmd.Trouble("diagnostics")
       end,
     },
   },
