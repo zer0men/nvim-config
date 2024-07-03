@@ -25,7 +25,7 @@ return {
     {
       "<leader>nb",
       function()
-        vim.cmd.Neotree("toggle", "float", "buffers", "filesystem", "reveal", "reveal_force_cwd" )
+        vim.cmd.Neotree("toggle", "float", "buffers", "reveal", "reveal_force_cwd" )
       end,
       desc = "NvimTree Toggle Buffers",
     },
