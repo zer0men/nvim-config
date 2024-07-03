@@ -8,6 +8,5 @@ return {
     })
     vim.cmd.TSInstall("all")
     vim.cmd.TSUpdate()
-    vim.cmd.TSEnable("highlight")
   end,
 }
