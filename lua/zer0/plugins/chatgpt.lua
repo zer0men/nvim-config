@@ -3,7 +3,7 @@ return {
   event = "VeryLazy",
   config = function()
     require("chatgpt").setup({
-      api_key_cmd = "pass openai.com/marko1299@ukr.net-nvim-api-key",
+      api_key_cmd = "echo 1111",
     })
   end,
   dependencies = {
