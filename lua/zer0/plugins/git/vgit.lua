@@ -20,5 +20,26 @@ return {
       end,
       desc = "Hunks Preview",
     },
+    {
+      "<leader>gbd",
+      function()
+        vim.cmd.VGit("buffer_diff_preview")
+      end,
+      desc = "Buffer Diff Preview",
+    },
+    {
+      "<leader>gD",
+      function()
+        vim.cmd.VGit("project_diff_preview")
+      end,
+      desc = "Project Diff Preview",
+    },
+    {
+      "<leader>gbh",
+      function()
+        vim.cmd.VGit("buffer_history_preview")
+      end,
+      desc = "Project Diff Preview",
+    },
   },
 }
