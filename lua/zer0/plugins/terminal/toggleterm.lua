@@ -8,7 +8,7 @@ return {
 
   opts = {
     shell = shell,
-    direction = "horizontal",
+    direction = "float",
     size = function(term)
       if term.direction == "horizontal" then
         return vim.o.lines * 0.38
