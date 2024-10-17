@@ -2,6 +2,7 @@ local M = {}
 
 M.lsp_servers = {
   "ansiblels",
+  "arduino_language_server",
   "bashls",
   "clangd",
   "eslint",
@@ -10,13 +11,16 @@ M.lsp_servers = {
   "lua_ls",
   "cssls",
   "terraformls",
+  "kotlin_language_server",
   -- "intelephense",
   "dockerls",
   "docker_compose_language_service",
   "phpactor",
   "tflint",
-  "tsserver",
+  "ts_ls",
   "pyright",
+  "grammarly",
+  -- "ltex",
   "yamlls",
 }
 
@@ -27,13 +31,21 @@ M.formatters = {
   javascript = { "prettier", "eslint_d" },
   yaml = { "yamlfmt", "yq", "yamlfix" },
   typescript = { "prettier", "eslint_d" },
-  -- terraform = { "terraform-fmt" },
+  arduino = { "clang-format", "astile" },
+  ["c++"] = { "clang-format", "astile" },
+  terraform = { "terraform_fmt" },
+  ["terraform-vars"] = { "terraform_fmt" },
 }
 
 M.linters = {
+  arduino = { "cppcheck", "cpplint" },
+  ["c++"] = { "cppcheck", "cpplint" },
   markdown = { "markdownlint" },
   ansible = { "ansible-lint" },
   python = { "pylint" },
+  gitcommit = { "commitlint" },
+  terraform = { "tflint", "tfsec" },
+  ["terraform-vars"] = { "tflint", "tfsec" },
 }
 
 local mason_tools = {}
