@@ -1,4 +1,5 @@
 local vars = require("zer0.vars")
+local homepath = os.getenv("HOME")
 
 return {
   "mfussenegger/nvim-lint",
@@ -21,7 +22,7 @@ return {
 
     local commitlint = require("lint").linters.commitlint
     commitlint.args = {
-      "--config=~/.config/commitlint/main.js",
+      "--config=" .. homepath .. "/.config/commitlint/main.js",
     }
   end,
 }
