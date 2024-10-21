@@ -31,8 +31,8 @@ M.formatters = {
   javascript = { "prettier", "eslint_d" },
   yaml = { "yamlfmt", "yq", "yamlfix" },
   typescript = { "prettier", "eslint_d" },
-  arduino = { "clang-format", "astile" },
-  ["c++"] = { "clang-format", "astile" },
+  arduino = { "clang-format"},
+  ["c++"] = { "clang-format"},
   terraform = { "terraform_fmt" },
   ["terraform-vars"] = { "terraform_fmt" },
 }
