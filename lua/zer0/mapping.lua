@@ -3,7 +3,7 @@ vim.keymap.set("i", "jj", "<ESC>", { silent = true })
 vim.keymap.set("t", "nn", "<C-\\><C-n>", { silent = true })
 
 vim.keymap.set("n", "gn", "<C-i>", { silent = true })
-vim.keymap.set("n", "gb", "<C-o>", { silent = true })
+vim.keymap.set("n", "gp", "<C-o>", { silent = true })
 vim.keymap.set("n", "<leader>/", vim.cmd.nohlsearch, { desc = "No Highligh" })
 -- Keymaping for buffer
 vim.keymap.set("n", "<leader>c", vim.cmd.bdelete, { silent = true })
