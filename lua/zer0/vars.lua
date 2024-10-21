@@ -12,7 +12,6 @@ M.lsp_servers = {
   "cssls",
   "terraformls",
   "kotlin_language_server",
-  -- "intelephense",
   "dockerls",
   "docker_compose_language_service",
   "phpactor",
@@ -20,7 +19,6 @@ M.lsp_servers = {
   "ts_ls",
   "pyright",
   "grammarly",
-  -- "ltex",
   "yamlls",
 }
 
