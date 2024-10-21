@@ -9,5 +9,5 @@ return {
     local name = "catppuccin"
     colorschemes.set_colorscheme(name)
   end,
-  priority = 101,
+  priority = 10,
 }
