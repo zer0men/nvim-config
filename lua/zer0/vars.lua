@@ -33,7 +33,7 @@ M.formatters = {
   typescript = { "prettier", "eslint_d" },
   arduino = { "clang-format"},
   ["c++"] = { "clang-format"},
-  terraform = { "terraform_fmt" },
+  terraform = { "terraform-fmt" },
   ["terraform-vars"] = { "terraform_fmt" },
 }
 
@@ -47,21 +47,5 @@ M.linters = {
   terraform = { "tflint", "tfsec" },
   ["terraform-vars"] = { "tflint", "tfsec" },
 }
-
-local mason_tools = {}
-
-for _, value in pairs(M.formatters) do
-  for _, formatter_name in ipairs(value) do
-    table.insert(mason_tools, formatter_name)
-  end
-end
-
-for _, value in pairs(M.linters) do
-  for _, formatter_name in ipairs(value) do
-    table.insert(mason_tools, formatter_name)
-  end
-end
-
-M.mason_tools = mason_tools
 
 return M

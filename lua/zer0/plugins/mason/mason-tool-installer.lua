@@ -1,12 +1,10 @@
-local vars = require("zer0.vars")
-
 return {
   "WhoIsSethDaniel/mason-tool-installer.nvim",
   dependencies = {
     "williamboman/mason.nvim",
   },
   opts = {
-    ensure_installed = vars.mason_tools,
+    ensure_installed = {},
     -- if set to true this will check each tool for updates. If updates
     -- are available the tool will be updated. This setting does not
     -- affect :MasonToolsUpdate or :MasonToolsInstall.
