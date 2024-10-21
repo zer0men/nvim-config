@@ -18,11 +18,25 @@ return {
       desc = "Find File",
     },
     {
+      "<leader>fa",
+      function()
+        vim.cmd.Telescope("autocommands")
+      end,
+      desc = "Find autocommands",
+    },
+    {
+      "<leader>fk",
+      function()
+        vim.cmd.Telescope("keymaps")
+      end,
+      desc = "Find keymaps",
+    },
+    {
       "<leader>fb",
       function()
         vim.cmd.Telescope("buffers")
       end,
-      desc = "Find File",
+      desc = "Find buffers",
     },
     {
       "<leader>ft",
@@ -36,7 +50,7 @@ return {
       function()
         vim.cmd.Telescope("man_pages")
       end,
-      desc = "Find File",
+      desc = "Find map pages",
     },
 
     {
@@ -44,7 +58,7 @@ return {
       function()
         vim.cmd.Telescope("live_grep")
       end,
-      desc = "Find Grep",
+      desc = "Live Grep",
     },
     {
       "<leader>fh",
