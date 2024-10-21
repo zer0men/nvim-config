@@ -13,6 +13,10 @@ end, { silent = true })
 vim.keymap.set("n", "<leader>x", vim.cmd.x, { silent = true })
 vim.keymap.set("n", "<leader>W", vim.cmd.w, { silent = true })
 
+vim.keymap.set("n", "<leader>tc", function()
+  vim.o.cursorline = not vim.o.cursorline
+end, { silent = true, desc = "Toggle cursorline" })
+
 vim.keymap.set("n", "<leader>E", function()
   vim.cmd.e("%")
 end, { desc = "Reopen File" })
