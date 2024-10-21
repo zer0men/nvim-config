@@ -1,5 +1,9 @@
 return {
   "folke/which-key.nvim",
+  dependencies = {
+    { "echasnovski/mini.nvim", version = "*" },
+    { "nvim-tree/nvim-web-devicons" },
+  },
   event = "VeryLazy",
   init = function()
     vim.o.timeout = true
@@ -8,11 +12,5 @@ return {
   config = function()
     local which_key = require("which-key")
     which_key.setup({})
-    which_key.register({
-      f = { name = "Find" },
-      g = { name = "Git", w = { name = "worktree" } },
-      h = { name = "Hop" },
-      d = { name = "debug" },
-    }, { prefix = "<leader>" })
   end,
 }
