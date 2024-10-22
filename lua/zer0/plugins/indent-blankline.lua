@@ -1,7 +1,11 @@
 return {
   "lukas-reineke/indent-blankline.nvim",
   main = "ibl",
-  opts = {},
+  opts = {
+    scope = {
+      enabled = false,
+    },
+  },
   init = function()
     vim.opt.list = true
     vim.opt.listchars:append("eol:↴")
