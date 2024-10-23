@@ -10,12 +10,20 @@ return {
     dependencies = { "luarocks.nvim" },
     config = function()
       local rest = require("rest-nvim")
+      require("telescope").load_extension("rest")
     end,
     keys = {
       {
         "<leader>ro",
         function()
           vim.cmd.Rest("open")
+        end,
+        desc = "Rest Open",
+      },
+      {
+        "<leader>rs",
+        function()
+          vim.cmd.Telescope("rest", "select_env")
         end,
         desc = "Rest Open",
       },
