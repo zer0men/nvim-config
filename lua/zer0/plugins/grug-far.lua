@@ -1,12 +1,22 @@
 return {
   "MagicDuck/grug-far.nvim",
-  opts = {},
+  opts = {
+    ignoreVisualSelection = false,
+    engines = {
+      ripgrep = {
+        placeholders = {
+          flags = "--miltilines",
+        },
+      },
+    },
+  },
   config = function(_, opts)
     local grug = require("grug-far")
     grug.setup(opts)
+    vim.keymap.set({ "n", "v" }, "<leader>sr", grug.open)
   end,
   keys = {
-    { "<leader>sr", vim.cmd.GrugFar, mode = { "n", "v" }, desc = "Replace" },
+    { "<leader>sr", mode = { "n", "v" }, desc = "Replace" },
     {
       "<leader>ss",
       function()
