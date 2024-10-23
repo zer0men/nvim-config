@@ -6,7 +6,7 @@ return {
     grug.setup(opts)
   end,
   keys = {
-    { "<leader>sr", vim.cmd.GrugFar, desc = "Replace" },
+    { "<leader>sr", vim.cmd.GrugFar, mode = { "n", "v" }, desc = "Replace" },
     {
       "<leader>ss",
       function()
