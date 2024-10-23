@@ -33,3 +33,4 @@ for key, value in pairs(options) do
 end
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
