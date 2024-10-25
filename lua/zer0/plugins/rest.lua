@@ -21,11 +21,18 @@ return {
         desc = "Rest Open",
       },
       {
+        "<leader>rl",
+        function()
+          vim.cmd.Rest("logs")
+        end,
+        desc = "Rest Open",
+      },
+      {
         "<leader>rs",
         function()
           vim.cmd.Telescope("rest", "select_env")
         end,
-        desc = "Rest Open",
+        desc = "Rest Logs",
       },
       {
         "<leader>re",
