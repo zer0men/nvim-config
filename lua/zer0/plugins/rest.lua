@@ -1,3 +1,5 @@
+local func = require("zer0.function")
+
 return {
   {
     "vhyrro/luarocks.nvim",
@@ -11,6 +13,13 @@ return {
     config = function()
       local rest = require("rest-nvim")
       require("telescope").load_extension("rest")
+      vim.api.nvim_create_autocmd("User", {
+        pattern = "RestResponsePre",
+        callback = function()
+          local res = _G.rest_response
+          res.body = func.jq(res.body)
+        end,
+      })
     end,
     keys = {
       {
