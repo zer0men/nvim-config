@@ -1,5 +1,8 @@
 return {
   "epwalsh/obsidian.nvim",
+  init = function()
+    vim.o.conceallevel = 2
+  end,
   version = "*", -- recommended, use latest release instead of latest commit
   -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
   -- event = {
@@ -25,10 +28,10 @@ return {
       folder = "Daily",
       date_format = "%Y-%m-%d",
       alias_formal = "%Y-%m-%d",
-      template = "Templates/daily.md",
+      template = "templates/daily.md",
     },
     templates = {
-      folder = "Templates",
+      folder = "templates",
       date_format = "%Y-%m-%d",
       time_format = "%H:%M",
       -- A map for custom variables, the key should be the variable and the value a function
