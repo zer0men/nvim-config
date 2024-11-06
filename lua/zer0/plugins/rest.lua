@@ -1,4 +1,4 @@
-local func = require("zer0.function")
+local funcs = require("zer0.functions")
 
 return {
   {
@@ -13,11 +13,22 @@ return {
     config = function()
       local rest = require("rest-nvim")
       require("telescope").load_extension("rest")
+
       vim.api.nvim_create_autocmd("User", {
         pattern = "RestResponsePre",
         callback = function()
           local res = _G.rest_response
-          res.body = func.jq(res.body)
+          res.body = funcs.jq(res.body)
+        end,
+      })
+
+      vim.api.nvim_create_autocmd("User", {
+        pattern = "RestRequestPre",
+        callback = function()
+          local req = _G.rest_request
+          if req.body.data.content then
+            req.body.data.content = funcs.yaml_to_json(req.body.data.content)
+          end
         end,
       })
     end,
