@@ -16,6 +16,7 @@ return {
       "<leader>gcc",
       function()
         vim.cmd.Git("commit")
+        vim.cmd.startinsert()
       end,
       desc = "Git",
     },
