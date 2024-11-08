@@ -10,6 +10,17 @@ return {
     require("dbee").install()
   end,
   config = function()
-    require("dbee").setup(--[[optional config]])
+    local dbee = require("dbee")
+    dbee.setup()
+    vim.keymap.set("n", "<leader>io", dbee.toggle)
+    vim.keymap.set("n", "<leader>ir", dbee.execute)
+    vim.keymap.set("n", "<leader>ic", dbee.close)
+    vim.keymap.set("n", "<leader>is", dbee.store)
   end,
+  keys = {
+    { "<leader>io", desc = "Toggle dashboard" },
+    { "<leader>ic", desc = "Close dbee" },
+    { "<leader>ir", desc = "Dbee Run" },
+    { "<leader>is", desc = "Dbee Store" },
+  },
 }
