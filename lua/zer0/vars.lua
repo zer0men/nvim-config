@@ -20,6 +20,7 @@ M.lsp_servers = {
   "pyright",
   "grammarly",
   "yamlls",
+  "taplo",
 }
 
 M.formatters = {
