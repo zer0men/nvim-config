@@ -26,10 +26,16 @@ local options = {
   autoread = true,
   updatetime = 50,
   colorcolumn = "80",
+  shortmess = "ltToOCFI",
 }
 
 for key, value in pairs(options) do
-  vim.o[key] = value
+  res, err = pcall(function()
+    vim.o[key] = value
+  end)
+  if err then
+    print(err)
+  end
 end
 
 vim.g.mapleader = " "
