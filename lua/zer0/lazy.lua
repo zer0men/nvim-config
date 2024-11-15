@@ -1,4 +1,4 @@
-local concurrency = 5
+local concurrency = 1000
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
