@@ -3,4 +3,5 @@ return {
   config = function()
     require("pretty-fold").setup()
   end,
+  enabled = false,
 }
