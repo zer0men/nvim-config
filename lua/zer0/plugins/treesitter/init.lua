@@ -5,7 +5,7 @@ return {
     config = function()
       require("nvim-treesitter.configs").setup({
         ensure_installed = "all",
-        sync_install = true,
+        sync_install = false,
       })
       vim.cmd.TSInstall("all")
       vim.cmd.TSUpdate()
