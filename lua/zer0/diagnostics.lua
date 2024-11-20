@@ -8,6 +8,6 @@ vim.diagnostic.config({
       return string.format('%s\n%s', diagnostic.source, diagnostic.message)
     end,
   },
-  update_in_insert = true,
+  update_in_insert = false,
   severity_sort = true,
 })
