@@ -1,3 +1,6 @@
 return {
-  { import = "zer0.plugins.cmp" },
+  {
+    event = "VeryLazy",
+    import = "zer0.plugins.cmp",
+  },
 }

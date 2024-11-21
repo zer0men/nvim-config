@@ -1,4 +1,5 @@
 return {
+  event = "VeryLazy",
   "WhoIsSethDaniel/mason-tool-installer.nvim",
   dependencies = {
     "williamboman/mason.nvim",
