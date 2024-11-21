@@ -11,4 +11,9 @@ return {
     vim.keymap.set("n", "<leader>dk", dapui.close, { desc = "Close Dap" })
     vim.keymap.set("n", "<leader>dR", dapui.update_render, { desc = "Update Dap" })
   end,
+  keys = {
+    { "<leader>dk" },
+    { "<leader>dO" },
+    { "<leader>dR" },
+  },
 }
