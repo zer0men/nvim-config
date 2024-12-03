@@ -1,26 +1,23 @@
 return {
-  "Juksuu/worktrees.nvim",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-  },
+  "ThePrimeagen/git-worktree.nvim",
   config = function()
-    require("worktrees").setup()
-    require("telescope").load_extension("worktrees")
+    require("git-worktree").setup({})
+    require("telescope").load_extension("git_worktree")
   end,
   keys = {
     {
       "<leader>gww",
       function()
-        vim.cmd.Telescope("worktrees", "list_worktrees")
+        vim.cmd.Telescope("git_worktree", "git_worktrees")
       end,
       desc = "List Git Worktree",
     },
     {
       "<leader>gwc",
       function()
-        vim.cmd.GitWorktreeCreate()
+        vim.cmd.Telescope("git_worktree", "create_git_worktree")
       end,
-      desc = "Create Git Worktree",
+      desc = "List Git Worktree",
     },
   },
 }
