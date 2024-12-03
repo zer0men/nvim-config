@@ -10,6 +10,15 @@ return {
     if not status_ok then
       return
     end
-    url_open.setup({})
+    url_open.setup({
+      highlight_url = {
+        all_urls = {
+          underline = false,
+        },
+        cursor_move = {
+          underline = false,
+        },
+      },
+    })
   end,
 }
