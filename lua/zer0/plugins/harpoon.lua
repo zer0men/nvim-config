@@ -36,6 +36,7 @@ return {
     local mark = require("harpoon.mark")
     local ui = require("harpoon.ui")
     vim.keymap.set("n", "<leader>ja", mark.add_file, { desc = "Add file to harpoon" })
+    vim.keymap.set("n", "<leader>jd", mark.rm_file, { desc = "Remove file from harpoon" })
     vim.keymap.set("n", "<leader>jm", ui.toggle_quick_menu, { desc = "Toogle Menu" })
     vim.keymap.set("n", "<leader>jj", ui.nav_next, { desc = "Harpoon next" })
     vim.keymap.set("n", "<leader>jk", ui.nav_prev, { desc = "Harpoon prev" })
