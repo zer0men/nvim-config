@@ -5,11 +5,12 @@ return {
     config = function()
       require("nvim-treesitter.configs").setup({
         ensure_installed = "all",
+        additional_vim_regex_highlighting = true,
         sync_install = false,
       })
       vim.cmd.TSInstall("all")
       vim.cmd.TSUpdate()
-      vim.cmd.TSEnable("highlight")
+      vim.cmd.TSDisable("highlight")
       vim.cmd.TSEnable("indent")
 
       vim.keymap.set("n", "<leader>tth", function()
