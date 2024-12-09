@@ -14,6 +14,13 @@ return {
       desc = "Toggle Current line blame",
     },
     {
+      "<leader>gl",
+      function()
+        vim.cmd.Gitsigns("blame_line")
+      end,
+      desc = "Toggle Current line blame",
+    },
+    {
       "<leader>gba",
       function()
         vim.cmd.Gitsigns("stage_buffer")
