@@ -7,6 +7,7 @@ return {
         ensure_installed = "all",
         additional_vim_regex_highlighting = true,
         sync_install = false,
+        ignore_install = { "hoon" },
       })
       vim.cmd.TSInstall("all")
       vim.cmd.TSUpdate()
