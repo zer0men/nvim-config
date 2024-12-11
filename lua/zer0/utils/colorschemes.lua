@@ -16,6 +16,4 @@ function M.apply_colorscheme()
   end
 end
 
-M.set_colorscheme("github_dark")
-
 return M
