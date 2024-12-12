@@ -7,12 +7,6 @@ return {
   },
   keys = {
     {
-      "fd",
-      function()
-        vim.cmd.Trouble("diagnostics")
-      end,
-    },
-    {
       "gd",
       function()
         vim.cmd.Trouble("lsp_definitions")
