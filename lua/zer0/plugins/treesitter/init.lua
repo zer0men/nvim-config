@@ -4,15 +4,18 @@ return {
     event = "VeryLazy",
     config = function()
       require("nvim-treesitter.configs").setup({
+        highlight = {
+          enable = true,
+          additional_vim_regex_highlighting = { "markdown" },
+        },
+        indent = {
+          enable = true,
+        },
         ensure_installed = "all",
-        additional_vim_regex_highlighting = true,
         sync_install = false,
         ignore_install = { "hoon" },
       })
       vim.cmd.TSInstall("all")
-      vim.cmd.TSUpdate()
-      vim.cmd.TSDisable("highlight")
-      vim.cmd.TSEnable("indent")
 
       vim.keymap.set("n", "<leader>tth", function()
         vim.cmd.TSBufToggle("highlight")
@@ -26,6 +29,7 @@ return {
     "nvim-treesitter/nvim-treesitter-textobjects",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     event = "VeryLazy",
+    enabled = false,
     config = function()
       local treesitter = require("nvim-treesitter.configs")
 
