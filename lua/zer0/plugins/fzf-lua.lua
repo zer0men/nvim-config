@@ -9,6 +9,9 @@ return {
       vim.cmd.FzfLua("colorschemes")
     end, { desc = "FZF colorsheme" })
   end,
+  cmd = {
+    "FzfLua",
+  },
   keys = {
     { "<leader>fc" },
   },
