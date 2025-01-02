@@ -26,9 +26,13 @@ return {
         pattern = "RestRequestPre",
         callback = function()
           local req = _G.rest_request
-          if req.body.data.content then
-            req.body.data.content = funcs.yaml_to_json(req.body.data.content)
+          if req.method == "GET" then
+            return
           end
+          if req.body == nil then
+              return
+          end
+          req.body.data.content = funcs.yaml_to_json(req.body.data.content)
         end,
       })
     end,
