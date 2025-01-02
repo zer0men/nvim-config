@@ -28,4 +28,9 @@ M.jq = function(input)
   return input
 end
 
+M.profiler = function()
+    filename = vim.fn.input("Profiler file path")
+    vim.cmd.profile()
+end
+
 return M
