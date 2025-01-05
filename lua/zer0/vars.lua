@@ -32,7 +32,7 @@ M.formatters = {
   typescript = { "prettier", "eslint_d" },
   arduino = { "clang-format" },
   ["c++"] = { "clang-format" },
-  terraform = { "terraform-fmt" },
+  terraform = { "terraform_fmt" },
   ["terraform-vars"] = { "terraform_fmt" },
 }
 
