@@ -25,10 +25,10 @@ return {
       },
     },
     daily_notes = {
-      folder = "Daily",
+      folder = "daily",
       date_format = "%Y-%m-%d",
       alias_formal = "%Y-%m-%d",
-      template = "templates/daily.md",
+      template = "Daily.md",
     },
     templates = {
       folder = "templates",
