@@ -13,9 +13,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins_spec = {
-    { import = "zer0.plugins" },
-}
+local plugins_spec = {}
 
 local config_path = vim.fn.stdpath("config")
 for _, plugins_path in ipairs(vim.fn.globpath(config_path .. "/lua/zer0/plugins/", "*/", true, true)) do
