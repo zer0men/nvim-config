@@ -13,9 +13,19 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local plugins_spec = {
+    { import = "zer0.plugins" },
+}
+
+local config_path = vim.fn.stdpath("config")
+for _, plugins_path in ipairs(vim.fn.globpath(config_path .. "/lua/zer0/plugins/", "*/", true, true)) do
+  local module = plugins_path:match(".*/([^/]*)/$")
+  table.insert(plugins_spec, {import = "zer0.plugins." .. module})
+end
+
 local lazy = require("lazy")
 lazy.setup({
-  spec = { import = "zer0.plugins" },
+  spec = plugins_spec,
   concurrency = concurrency,
   checker = {
     concurrency = concurrency,

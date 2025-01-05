@@ -7,7 +7,7 @@ return {
   },
   event = "VeryLazy",
   config = function()
-    require("zer0.plugins.telescope.setup")
+    require("zer0.configs.telescope")
   end,
   keys = {
     {
