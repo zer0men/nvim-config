@@ -21,7 +21,7 @@ return {
     {
       "<leader>q",
       function()
-        vim.cmd.Trouble("diagnostics")
+        vim.cmd.Trouble("diagnostics", "toggle")
       end,
     },
   },
