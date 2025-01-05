@@ -4,7 +4,7 @@ return {
   config = function()
     require("project_nvim").setup({
       -- patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json" },
-      patterns = { ".git" },
+      patterns = { ".git", "package.json" },
       detection_methods = { "pattern", "lsp" },
       silent_chdir = true,
       -- your configuration comes here
