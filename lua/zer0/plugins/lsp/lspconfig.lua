@@ -20,7 +20,6 @@ return {
         handlers = {
           ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { stylize_markdown = true }),
         },
-        root_dir = require("lspconfig.util").root_pattern(".git"),
         capabilities = vim.g.capabilities,
         settings = setting,
         on_attach = function(client, bufrn)
