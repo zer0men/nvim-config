@@ -1,3 +1,5 @@
+local builtin = require("telescope.builtin")
+
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
@@ -10,6 +12,13 @@ return {
     require("zer0.configs.telescope")
   end,
   keys = {
+    {
+      "<leader>fw",
+      function()
+        local word = vim.fn.expand("<cword>")
+        builtin.grep_string({ search = word })
+      end,
+    },
     {
       "<leader>ff",
       function()

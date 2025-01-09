@@ -20,3 +20,9 @@ end, { silent = true, desc = "Toggle cursorline" })
 vim.keymap.set("n", "<leader>E", function()
   vim.cmd.e("%")
 end, { desc = "Reopen File" })
+
+-- Copied From primagen config
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+vim.keymap.set("n", "<leader>X", "<cmd>!chmod +x %<CR>", { silent = true })
