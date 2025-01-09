@@ -1,4 +1,17 @@
 local vars = require("zer0.vars")
+
+local lsp_servers = {}
+
+for _, value in ipairs(vars.lsp_servers) do
+    if type(value) == "string" then
+        table.insert(lsp_servers, value)
+    elseif type(value) == "table" then
+        if value[1] ~= nil then
+            table.insert(lsp_servers, value[1])
+        end
+    end
+end
+
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
@@ -10,7 +23,7 @@ return {
     navic.setup({})
     require("neodev").setup({})
     local lspconfig = require("lspconfig")
-    for _, lsp_server in ipairs(vars.lsp_servers) do
+    for _, lsp_server in ipairs(lsp_servers) do
       local is_config, config = pcall(require, "zer0.plugins.lsp.config." .. lsp_server)
       local setting = nil
       if is_config then
