@@ -49,7 +49,7 @@ local options = {
 }
 
 for key, value in pairs(options) do
-  res, err = pcall(function()
+  local _, err = pcall(function()
     vim.opt[key] = value
   end)
   if err then
