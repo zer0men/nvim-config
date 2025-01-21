@@ -8,6 +8,8 @@ vim.api.nvim_create_autocmd({ "BufRead" }, {
 vim.api.nvim_create_autocmd({ "BufRead" }, {
   pattern = { "*" },
   callback = function()
-    vim.opt.formatoptions:remove({ "c", "r", "o" })
+    vim.opt.formatoptions:append("r")
+    vim.opt.formatoptions:append("n")
+    vim.opt.formatoptions:append("t")
   end,
 })
