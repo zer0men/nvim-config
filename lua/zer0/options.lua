@@ -7,22 +7,34 @@ local options = {
   autoread = true,
   breakindent = true,
   clipboard = "unnamedplus",
-  colorcolumn = "80",
-  completeopt = "menuone,noselect",
+  completeopt = { "menu", "menuone", "noselect", "noinsert" },
   cursorline = false,
   expandtab = true,
   guicursor = "",
   guifont = "FiraCode Nerd Font 11",
   hlsearch = false,
+  colorcolumn = { 81, 101 },
   ignorecase = true,
   incsearch = false,
   mouse = "",
   number = true,
   relativenumber = true,
   scrolloff = 7,
+  sidescrolloff = 7,
   shiftround = true,
   shiftwidth = 4,
   shortmess = "ltToOCFI",
+  listchars = {
+    tab = "⇥-",
+    lead = "·",
+    trail = "·",
+    nbsp = "⎵",
+    extends = "⟩",
+    precedes = "⟨",
+  },
+  showbreak = "➥ ",
+  spelllang = { "en", "uk" },
+  pumheight = 20,
   signcolumn = "yes",
   smartcase = true,
   smarttab = true,
@@ -38,9 +50,9 @@ local options = {
 
 for key, value in pairs(options) do
   res, err = pcall(function()
-    vim.o[key] = value
+    vim.opt[key] = value
   end)
   if err then
-    print(err)
+    print(key .. ": " .. err)
   end
 end
