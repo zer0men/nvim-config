@@ -5,6 +5,7 @@ vim.g.loaded_matchparen = 1 -- disable built-in MatchParen.
 local options = {
   autoindent = true,
   autoread = true,
+  conceallevel = 0,
   breakindent = true,
   clipboard = "unnamedplus",
   completeopt = { "menu", "menuone", "noselect", "noinsert" },
