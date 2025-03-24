@@ -1,7 +1,6 @@
 return {
   "epwalsh/obsidian.nvim",
-  init = function()
-  end,
+  init = function() end,
   version = "*", -- recommended, use latest release instead of latest commit
   -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
   -- event = {
@@ -52,18 +51,19 @@ return {
   },
   keys = {
     { "<leader>oD", vim.cmd.ObsidianDailies, desc = "Dailes" },
-    { "<leader>oT", vim.cmd.ObsidianTags, desc = "Tags" },
+    { "<leader>oF", vim.cmd.ObsidianFollowLink, desc = "Follow Link" },
+    { "<leader>oN", vim.cmd.ObsidianNewFromTemplate, desc = "New From Template" },
+    { "<leader>ob", vim.cmd.ObsidianBacklinks, desc = "Dailes" },
+    { "<leader>oc", vim.cmd.ObsidianToggleCheckbox, desc = "Toggle Checkbox" },
     { "<leader>od", vim.cmd.ObsidianToday, desc = "Today" },
+    { "<leader>oft", vim.cmd.ObsidianTags, desc = "Tags" },
     { "<leader>oi", vim.cmd.ObsidianPasteImg, desc = "Paste Image" },
+    { "<leader>ol", vim.cmd.ObsidianLinks, desc = "Links" },
+    { "<leader>on", vim.cmd.ObsidianNew, desc = "New" },
+    { "<leader>or", vim.cmd.ObsidianRename, desc = "Rename" },
+    { "<leader>os", vim.cmd.ObsidianSearch, desc = "Search" },
     { "<leader>ot", vim.cmd.ObsidianTemplate, desc = "Template" },
     { "<leader>ow", vim.cmd.ObsidianWorkspace, desc = "Worksace" },
     { "<leader>oy", vim.cmd.ObsidianYesterday, desc = "Yesterday" },
-    { "<leader>or", vim.cmd.ObsidianRename, desc = "Rename" },
-    { "<leader>os", vim.cmd.ObsidianSearch, desc = "Search" },
-    { "<leader>of", vim.cmd.ObsidianFollowLink, desc = "Follow Link" },
-    { "<leader>on", vim.cmd.ObsidianNew, desc = "New" },
-    { "<leader>oN", vim.cmd.ObsidianLinkNew, desc = "Link New" },
-    { "<leader>oc", vim.cmd.ObsidianToggleCheckbox, desc = "Toggle Checkbox" },
-    { "<leader>ol", vim.cmd.ObsidianLinks, desc = "Links" },
   },
 }
