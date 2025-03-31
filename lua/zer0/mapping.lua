@@ -21,4 +21,8 @@ vim.keymap.set("n", "<leader>E", function()
   vim.cmd.e("%")
 end, { desc = "Reopen File" })
 
+vim.keymap.set("n", "<leader>w", function()
+  vim.cmd.w("%")
+end, { desc = "Write File" })
+
 vim.keymap.set("n", "<leader>X", "<cmd>!chmod +x %<CR>", { silent = true })
