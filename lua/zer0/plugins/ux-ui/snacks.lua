@@ -4,10 +4,12 @@ return {
   "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
-  ---@type snacks.Config
+  init = function()
+    vim.g.snacks_animate = false
+  end,
   opts = {
     bigfile = { enabled = true },
-    dashboard = { enabled = true },
+    dashboard = { enabled = false },
     explorer = { enabled = true },
     indent = { enabled = true },
     input = { enabled = true },
