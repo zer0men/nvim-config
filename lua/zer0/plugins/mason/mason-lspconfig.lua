@@ -20,9 +20,9 @@ for _, value in ipairs(vars.lsp_servers) do
 end
 
 return {
-  event = "VeryLazy",
   "williamboman/mason-lspconfig.nvim",
   opts = {
     ensure_installed = lsp_servers,
+    automatic_enable = false
   },
 }
