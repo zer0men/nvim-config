@@ -6,7 +6,7 @@ return {
   init = function()
     telescope_tools.add_extension("repo", {
       list = {
-        search_dirs = { "~/" },
+        search_dirs = { "~/projects/" },
         fd_opts = {
           "--no-ignore-vcs",
         },

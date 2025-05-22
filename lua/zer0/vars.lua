@@ -16,6 +16,7 @@ M.lsp_servers = {
   "lua_ls",
   "phpactor",
   "pyright",
+  "omnisharp",
   "taplo",
   "terraformls",
   "tflint",

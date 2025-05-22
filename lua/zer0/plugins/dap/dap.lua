@@ -1,5 +1,5 @@
 return {
-  "mfussenegger/nvim-dap",
+ "mfussenegger/nvim-dap",
   config = function()
     local dap = require("dap")
     local dapbp = require("dap.breakpoints")
@@ -18,5 +18,6 @@ return {
     vim.keymap.set("n", "<leader>dt", dap.terminate, { desc = "Terminate" })
 
     require("zer0.plugins.dap.configs.php")
+    require("zer0.plugins.dap.configs.js-ts")
   end,
 }

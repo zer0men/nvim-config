@@ -9,5 +9,5 @@ return {
     local name = colorcheme.name
     colorschemes.set_colorscheme(name)
   end,
-  priority = 20,
+  priority = 100,
 }

@@ -18,6 +18,7 @@ return {
         local word = vim.fn.expand("<cword>")
         builtin.grep_string({ search = word })
       end,
+      mode = { "n", "v" },
     },
     {
       "<leader>ff",
@@ -48,11 +49,18 @@ return {
       desc = "Find buffers",
     },
     {
+      "<leader>fT",
+      function()
+        vim.cmd.Telescope("filetypes")
+      end,
+      desc = "Change filetype",
+    },
+    {
       "<leader>ft",
       function()
         vim.cmd.Telescope("treesitter")
       end,
-      desc = "Find treesitter",
+      desc = "Treesitter",
     },
     {
       "<leader>fm",

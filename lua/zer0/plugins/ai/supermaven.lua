@@ -7,7 +7,7 @@ return {
       supermaven.setup({})
       vim.g.cmp.add_source("supermaven")
       supermaven_api.stop()
-      vim.keymap.set("n", "<leader>ts", supermaven_api.toggle)
+      vim.keymap.set("n", "<leader>ts", supermaven_api.toggle, { desc = "Toggle Supermaven" })
     end,
     keys = {
       { "<leader>ts", desc = "Toggle Supermaven" },

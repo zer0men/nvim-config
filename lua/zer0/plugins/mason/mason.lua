@@ -6,6 +6,6 @@ return {
     mason.setup({})
 
     local mason_api = require("mason.api.command")
-    mason_api.MasonUpdate()
+    -- mason_api.MasonUpdate()
   end,
 }
