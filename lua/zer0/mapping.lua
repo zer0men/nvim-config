@@ -11,7 +11,9 @@ vim.keymap.set("n", "<leader>C", function()
   vim.cmd.bdelete({ bang = true })
 end, { silent = true })
 vim.keymap.set("n", "<leader>x", vim.cmd.x, { silent = true })
-vim.keymap.set("n", "<leader>W", vim.cmd.w, { silent = true })
+vim.keymap.set("n", "<leader>W", function()
+    vim.cmd("write")
+end, { silent = true })
 
 vim.keymap.set("n", "<leader>tc", function()
   vim.o.cursorline = not vim.o.cursorline
