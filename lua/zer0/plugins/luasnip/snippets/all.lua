@@ -26,4 +26,6 @@ end
 return {
   s("now", { f(datetimef, {}, { user_args = { "%H:%M:%S" } }), t(" "), i(0, "") }),
   s("today", { f(datetimef, {}, { user_args = { "%d.%m.%Y" } }), t(" "), i(0, "") }),
+  s("my-ip", { t("5.58.81.68") }),
+  s("wise-ip", { t("82.207.87.222") }),
 }

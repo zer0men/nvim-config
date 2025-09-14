@@ -18,6 +18,5 @@ return {
     vim.keymap.set("n", "<leader>dt", dap.terminate, { desc = "Terminate" })
 
     require("zer0.plugins.dap.configs.php")
-    require("zer0.plugins.dap.configs.js-ts")
   end,
 }

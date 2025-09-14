@@ -9,5 +9,5 @@ local colorschemes = require("zer0.utils.colorschemes")
     require(plug.name).setup(opts)
     colorschemes.set_colorscheme(name)
   end,
-  priority = 10000,
+  priority = 100000,
 }

@@ -17,18 +17,21 @@ M.lsp_servers = {
   "phpactor",
   "pyright",
   "omnisharp",
+  "hyprls",
   "taplo",
   "terraformls",
   "tflint",
   "ts_ls",
   "yamlls",
   "nginx_language_server",
+  "rust_analyzer",
 }
 
 M.formatters = {
   lua = { "stylua" }, -- Conform will run multiple formatters sequentially
   python = { "isort", "black" },
   -- Use a sub-list to run only the first available formatter
+  json = { "deno_fmt" },
   javascript = { "prettier", "eslint_d" },
   yaml = { "yamlfmt", "yq", "yamlfix" },
   typescript = { "prettier", "eslint_d" },
@@ -36,6 +39,7 @@ M.formatters = {
   ["c++"] = { "clang-format" },
   terraform = { "terraform_fmt" },
   ["terraform-vars"] = { "terraform_fmt" },
+  hcl = { "hclfmt" },
 }
 
 M.linters = {

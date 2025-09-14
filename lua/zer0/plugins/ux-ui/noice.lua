@@ -4,8 +4,20 @@ return {
   config = function()
     local noice = require("noice")
     noice.setup({
+      messages = {
+        history = { -- Configuration for :Noice history
+          view = "split",
+        },
+        last = { -- Configuration for :Noice last
+          view = "popup",
+        },
+        errors = { -- Configuration for :Noice errors
+          view = "split",
+        },
+      },
       lsp = {
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+        --
         override = {
           ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
           ["vim.lsp.util.stylize_markdown"] = true,

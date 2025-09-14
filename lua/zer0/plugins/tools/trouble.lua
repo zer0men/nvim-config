@@ -19,6 +19,12 @@ return {
       end,
     },
     {
+      "gi",
+      function()
+        vim.cmd.Trouble("lsp_implementations")
+      end,
+    },
+    {
       "<leader>q",
       function()
         vim.cmd.Trouble("diagnostics", "toggle")

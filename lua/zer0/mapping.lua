@@ -1,3 +1,7 @@
+local functions = require("zer0.functions")
+
+vim.keymap.set("n", ";l", functions.copy_f_location, { silent = true })
+
 -- Go To normal Mode
 vim.keymap.set("i", "jj", "<ESC>", { silent = true })
 vim.keymap.set("t", "nn", "<C-\\><C-n>", { silent = true })
@@ -12,16 +16,16 @@ vim.keymap.set("n", "<leader>C", function()
 end, { silent = true })
 vim.keymap.set("n", "<leader>x", vim.cmd.x, { silent = true })
 vim.keymap.set("n", "<leader>W", function()
-    vim.cmd("write")
+  vim.cmd("write")
 end, { silent = true })
 
 vim.keymap.set("n", "<leader>tc", function()
   vim.o.cursorline = not vim.o.cursorline
 end, { silent = true, desc = "Toggle cursorline" })
 
--- vim.keymap.set("n", "<leader>E", function()
---   vim.cmd.e("%")
--- end, { desc = "Reopen File" })
+vim.keymap.set("n", "<leader>E", function()
+  vim.cmd.e("%")
+end, { desc = "Reopen File" })
 
 vim.keymap.set("n", "<leader>w", function()
   vim.cmd.w()

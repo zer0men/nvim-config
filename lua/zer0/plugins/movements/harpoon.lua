@@ -40,6 +40,15 @@ return {
     vim.keymap.set("n", "<leader>jm", ui.toggle_quick_menu, { desc = "Toogle Menu" })
     vim.keymap.set("n", "<leader>jj", ui.nav_next, { desc = "Harpoon next" })
     vim.keymap.set("n", "<leader>jk", ui.nav_prev, { desc = "Harpoon prev" })
+    vim.keymap.set("n", "<leader>j1", function()
+      ui.nav_file(1)
+    end, { desc = "Harpoon file 1" })
+    vim.keymap.set("n", "<leader>j2", function()
+      ui.nav_file(2)
+    end, { desc = "Harpoon file 1" })
+    vim.keymap.set("n", "<leader>j3", function()
+      ui.nav_file(3)
+    end, { desc = "Harpoon file 3" })
   end,
   keys = {
     { "<leader>jj" },

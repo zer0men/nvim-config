@@ -1,5 +1,16 @@
 local M = {}
 
+M.copy_f_location = function()
+  local file = vim.fn.expand("%:p")
+  local line = vim.fn.line(".")
+  local location = file .. ":" .. line
+  vim.system({ "copy" }, {
+    stdin = location,
+    text = true,
+  })
+  vim.notify("copied")
+end
+
 M.yaml_to_json = function(input)
   local obj = vim
     .system({ "yq", "-j", "--indent=0" }, {
@@ -29,8 +40,8 @@ M.jq = function(input)
 end
 
 M.profiler = function()
-    filename = vim.fn.input("Profiler file path")
-    vim.cmd.profile()
+  filename = vim.fn.input("Profiler file path")
+  vim.cmd.profile()
 end
 
 return M

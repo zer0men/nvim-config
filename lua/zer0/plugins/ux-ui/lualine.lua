@@ -1,6 +1,5 @@
 return {
   "nvim-lualine/lualine.nvim",
-  enabled = false,
   dependencies = {
     "SmiteshP/nvim-navic",
     "nvim-tree/nvim-web-devicons",
@@ -10,7 +9,7 @@ return {
     require("lualine").setup({
 
       options = {
-        theme = vim.g.colorscheme,
+        theme = "auto",
         icons_enabled = true,
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
