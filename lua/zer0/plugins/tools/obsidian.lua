@@ -66,4 +66,7 @@ return {
     { "<leader>ow", vim.cmd.ObsidianWorkspace, desc = "Worksace" },
     { "<leader>oy", vim.cmd.ObsidianYesterday, desc = "Yesterday" },
   },
+  cmd = {
+    "ObsidianToday",
+  },
 }
