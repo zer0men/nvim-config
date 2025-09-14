@@ -16,6 +16,9 @@ return {
     -- see below for full list of optional dependencies 👇
   },
   opts = {
+    ui = {
+      enable = false
+    },
     workspaces = {
       {
         name = "second-brain",
@@ -50,21 +53,21 @@ return {
     -- see below for full list of options 👇
   },
   keys = {
-    { "<leader>oD", vim.cmd.ObsidianDailies, desc = "Dailes" },
-    { "<leader>oF", vim.cmd.ObsidianFollowLink, desc = "Follow Link" },
-    { "<leader>oN", vim.cmd.ObsidianNewFromTemplate, desc = "New From Template" },
-    { "<leader>ob", vim.cmd.ObsidianBacklinks, desc = "Dailes" },
-    { "<leader>oc", vim.cmd.ObsidianToggleCheckbox, desc = "Toggle Checkbox" },
-    { "<leader>od", vim.cmd.ObsidianToday, desc = "Today" },
-    { "<leader>oft", vim.cmd.ObsidianTags, desc = "Tags" },
-    { "<leader>oi", vim.cmd.ObsidianPasteImg, desc = "Paste Image" },
-    { "<leader>ol", vim.cmd.ObsidianLinks, desc = "Links" },
-    { "<leader>on", vim.cmd.ObsidianNew, desc = "New" },
-    { "<leader>or", vim.cmd.ObsidianRename, desc = "Rename" },
-    { "<leader>os", vim.cmd.ObsidianSearch, desc = "Search" },
-    { "<leader>ot", vim.cmd.ObsidianTemplate, desc = "Template" },
-    { "<leader>ow", vim.cmd.ObsidianWorkspace, desc = "Worksace" },
-    { "<leader>oy", vim.cmd.ObsidianYesterday, desc = "Yesterday" },
+    { "<leader>oD",  vim.cmd.ObsidianDailies,         desc = "Dailes" },
+    { "<leader>oF",  vim.cmd.ObsidianFollowLink,      desc = "Follow Link" },
+    { "<leader>oN",  vim.cmd.ObsidianNewFromTemplate, desc = "New From Template" },
+    { "<leader>ob",  vim.cmd.ObsidianBacklinks,       desc = "Dailes" },
+    { "<leader>oc",  vim.cmd.ObsidianToggleCheckbox,  desc = "Toggle Checkbox" },
+    { "<leader>od",  vim.cmd.ObsidianToday,           desc = "Today" },
+    { "<leader>oft", vim.cmd.ObsidianTags,            desc = "Tags" },
+    { "<leader>oi",  vim.cmd.ObsidianPasteImg,        desc = "Paste Image" },
+    { "<leader>ol",  vim.cmd.ObsidianLinks,           desc = "Links" },
+    { "<leader>on",  vim.cmd.ObsidianNew,             desc = "New" },
+    { "<leader>or",  vim.cmd.ObsidianRename,          desc = "Rename" },
+    { "<leader>os",  vim.cmd.ObsidianSearch,          desc = "Search" },
+    { "<leader>ot",  vim.cmd.ObsidianTemplate,        desc = "Template" },
+    { "<leader>ow",  vim.cmd.ObsidianWorkspace,       desc = "Worksace" },
+    { "<leader>oy",  vim.cmd.ObsidianYesterday,       desc = "Yesterday" },
   },
   cmd = {
     "ObsidianToday",
